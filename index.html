@@ -229,6 +229,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zengdehai/zengdehai.github.io/zengdehai.github.io/2022/042360747.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/zengdehai.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/zengdehai.github.io/2022/042360747.html" itemprop="url">docker学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-23T16:13:26+08:00">
+                2022-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>docker是一个软件容器。是简易Linux系统</p>
+<h1 id="二、三要素"><a href="#二、三要素" class="headerlink" title="二、三要素"></a>二、三要素</h1><p>镜像：是一个固定的模板。可以类比成java中的类</p>
+<p>容器：镜像的实例。可以看做java中的对象</p>
+<p>仓库：集中存放镜像的地方。仓库和仓库注册服务器是有区别的。仓库注册服务器上存放着多个仓库，每个仓库又包含了多个镜像，每个镜像有不同的标签（tag),仓库又分为公开仓库和私有仓库。</p>
+<h1 id="四、安装"><a href="#四、安装" class="headerlink" title="四、安装"></a>四、安装</h1><h2 id="4-1、安装"><a href="#4-1、安装" class="headerlink" title="4.1、安装"></a>4.1、安装</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281852821.png" alt="image-20220228185228505"></p>
+<p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281853407.png" alt="image-20220228185329372"></p>
+<p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281854672.png" alt="image-20220228185411644"></p>
+<p>安装步骤根据图片顺序，图片中的命令按照顺序执行</p>
+<h2 id="4-2、更改仓库下载地址为阿里云镜像加速"><a href="#4-2、更改仓库下载地址为阿里云镜像加速" class="headerlink" title="4.2、更改仓库下载地址为阿里云镜像加速"></a>4.2、更改仓库下载地址为阿里云镜像加速</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281919290.png" alt="image-20220228191908232"></p>
+<h2 id="4-3、运行第一个命令"><a href="#4-3、运行第一个命令" class="headerlink" title="4.3、运行第一个命令"></a>4.3、运行第一个命令</h2><pre class=" language-shell"><code class="language-shell">docker  run  hello-world
+</code></pre>
+<h2 id="4-4、run做了什么事"><a href="#4-4、run做了什么事" class="headerlink" title="4.4、run做了什么事"></a>4.4、run做了什么事</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281920634.png" alt="image-20220228192017529"></p>
+<h1 id="五、docker客户端命令"><a href="#五、docker客户端命令" class="headerlink" title="五、docker客户端命令"></a>五、docker客户端命令</h1><h2 id="5-1、帮助命令"><a href="#5-1、帮助命令" class="headerlink" title="5.1、帮助命令"></a>5.1、帮助命令</h2><pre class=" language-shell"><code class="language-shell">--查看docker版本
+docker verion
+--docker的描述
+docker info
+--查看docker的命令有哪些
+docker --helpe
+</code></pre>
+<h2 id="5-2、镜像命令"><a href="#5-2、镜像命令" class="headerlink" title="5.2、镜像命令"></a>5.2、镜像命令</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281941356.png" alt="image-20220228194100237"></p>
+<pre class=" language-shell"><code class="language-shell">--查看当前主机有哪些镜像实例
+docker images
+参数说明：
+docker images -a 列出本地所有镜像层（包含中间层）
+docker images -q 只显示镜像id
+docker images --digests 显示镜像的摘要信息
+
+--查看某个镜像的名字
+docker search 镜像的名字
+--下载镜像
+docker pull 镜像的名字 : 镜像的id（不带参数就是最新版）
+--删除某个镜像,加上-f就是强制删除
+docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
+</code></pre>
+<p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202282018265.png" alt="image-20220228201802205"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zengdehai/zengdehai.github.io/zengdehai.github.io/2022/042357300.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1150,7 +1304,7 @@
               
                 <a href="/zengdehai.github.io/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
