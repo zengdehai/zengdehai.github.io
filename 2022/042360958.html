@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="idea快捷键, 大帅哥的博客">
+    <meta name="keywords" content="Oracle学习笔记, 大帅哥的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>idea快捷键 | 大帅哥的博客</title>
+    <title>Oracle学习笔记 | 大帅哥的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">idea快捷键</h1>
+                    <h1 class="description center-align post-title">Oracle学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -433,14 +433,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-                                <span class="chip bg-color">快捷键</span>
+                            <a href="/tags/oracle/">
+                                <span class="chip bg-color">oracle</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                关系型数据库
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -470,775 +479,144 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、快捷键大全"><a href="#一、快捷键大全" class="headerlink" title="一、快捷键大全"></a>一、快捷键大全</h1><h3 id="一、altSift快捷键"><a href="#一、altSift快捷键" class="headerlink" title="一、altSift快捷键"></a>一、altSift快捷键</h3><table>
+                <h2 id="1、单行函数：只对一行进行变换，每行返回一个结果"><a href="#1、单行函数：只对一行进行变换，每行返回一个结果" class="headerlink" title="1、单行函数：只对一行进行变换，每行返回一个结果"></a>1、单行函数：只对一行进行变换，每行返回一个结果</h2><p>单行函数包括：字符函数，字符控制函数、数字函数</p>
+<p>字符函数：</p>
+<p>upper(全部转换成大写)</p>
+<p>Initcap(首字母大写)</p>
+<h2 id="字符控制函数："><a href="#字符控制函数：" class="headerlink" title="字符控制函数："></a>字符控制函数：</h2><table>
 <thead>
 <tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
+<th>函数</th>
+<th>结果</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Alt + Shift + N</td>
-<td align="center">选择 &#x2F; 添加 task （必备）</td>
+<td>concat(‘Hello’,’Wrold’)</td>
+<td>HelloWorld</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + F</td>
-<td align="center">显示添加到收藏夹弹出层 &#x2F; 添加到收藏夹</td>
+<td>substr(‘HelloWorld’,1,5)这里下标从1开始，5个长度，和Java里面的有所不一样</td>
+<td>Hello</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + C</td>
-<td align="center">查看最近操作项目的变化情况列表</td>
+<td>length(‘HelloWorld’)</td>
+<td>10</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + I</td>
-<td align="center">查看项目当前文件</td>
+<td>lnstr(‘HelloWorld’,’W’)</td>
+<td>6</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + F7</td>
-<td align="center">在 Debug 模式下，下一步，进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环进入</td>
+<td>lpad(salary,10,’*’)左对齐</td>
+<td>*****24000</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + F9</td>
-<td align="center">弹出 Debug 的可选择菜单</td>
+<td>rpad(salary,10,’*’)右对齐</td>
+<td>24000*****</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + F10</td>
-<td align="center">弹出 Run 的可选择菜单</td>
+<td>trim(‘H’ from ‘HelloWHorldhH’)只能去除首尾的,sql中的字符串是大小写敏感的，sql语句不区分大小写，Java区分大小写</td>
+<td>elloWHorldh</td>
 </tr>
 <tr>
-<td align="center">Alt + Shift + 左键双击</td>
-<td align="center">选择被双击的单词 &#x2F; 中文句，按住不放，可以同时选择其他单词 &#x2F; 中文句 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + Shift + 前方向键</td>
-<td align="center">移动光标所在行向上移动 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + Shift + 后方向键</td>
-<td align="center">移动光标所在行向下移动 （必备）</td>
+<td>repalce(‘abcd’,’b’,’m’)</td>
+<td>amcd</td>
 </tr>
 </tbody></table>
-<h3 id="二、alt快捷键"><a href="#二、alt快捷键" class="headerlink" title="二、alt快捷键"></a>二、alt快捷键</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Alt + &#96;</td>
-<td align="center">显示版本控制常用操作菜单弹出层 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + Q</td>
-<td align="center">弹出一个提示，显示当前类的声明 &#x2F; 上下文信息</td>
-</tr>
-<tr>
-<td align="center">Alt + F1</td>
-<td align="center">显示当前文件选择目标弹出层，弹出层中有很多目标可以进行选择 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + F2</td>
-<td align="center">对于前面页面，显示各类浏览器打开目标选择弹出层</td>
-</tr>
-<tr>
-<td align="center">Alt + F3</td>
-<td align="center">选中文本，逐个往下查找相同文本，并高亮显示</td>
-</tr>
-<tr>
-<td align="center">Alt + F7</td>
-<td align="center">查找光标所在的方法 &#x2F; 变量 &#x2F; 类被调用的地方</td>
-</tr>
-<tr>
-<td align="center">Alt + F8</td>
-<td align="center">在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果</td>
-</tr>
-<tr>
-<td align="center">Alt + Home</td>
-<td align="center">定位 &#x2F; 显示到当前文件的 Navigation Bar</td>
-</tr>
-<tr>
-<td align="center">Alt + Enter</td>
-<td align="center">IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + Insert</td>
-<td align="center">代码自动生成，如生成对象的 set &#x2F; get 方法，构造函数，toString() 等 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + 左方向键</td>
-<td align="center">切换当前已打开的窗口中的子视图，比如Debug窗口中有Output、Debugger等子视图，用此快捷键就可以在子视图中切换 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + 右方向键</td>
-<td align="center">按切换当前已打开的窗口中的子视图，比如Debug窗口中有Output、Debugger等子视图，用此快捷键就可以在子视图中切换 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + 前方向键</td>
-<td align="center">当前光标跳转到当前文件的前一个方法名位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + 后方向键</td>
-<td align="center">当前光标跳转到当前文件的后一个方法名位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Alt + 1,2,3…9</td>
-<td align="center">显示对应数值的选项卡，其中 1 是 Project 用得最多 （必备）</td>
-</tr>
-</tbody></table>
-<h3 id="三、ctrl-shift-alt-快捷键"><a href="#三、ctrl-shift-alt-快捷键" class="headerlink" title="三、ctrl + shift + alt 快捷键"></a>三、ctrl + shift + alt 快捷键</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Ctrl + Shift + Alt + V</td>
-<td align="center">无格式黏贴 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Alt + N</td>
-<td align="center">前往指定的变量 &#x2F; 方法</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Alt + S</td>
-<td align="center">打开当前项目设置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Alt + C</td>
-<td align="center">复制参考信息</td>
-</tr>
-</tbody></table>
-<h3 id="四、Ctrl-alt"><a href="#四、Ctrl-alt" class="headerlink" title="四、Ctrl + alt"></a>四、Ctrl + alt</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Ctrl + Alt + L</td>
-<td align="center">格式化代码，可以对当前文件和整个包目录使用 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + O</td>
-<td align="center">优化导入的类，可以对当前文件和整个包目录使用 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + I</td>
-<td align="center">光标所在行 或 选中部分进行自动代码缩进，有点类似格式化</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + T</td>
-<td align="center">对选中的代码弹出环绕选项弹出层 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + J</td>
-<td align="center">弹出模板选择窗口，将选定的代码加入动态模板中</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + H</td>
-<td align="center">调用层次</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + B</td>
-<td align="center">在某个调用的方法名上使用会跳到具体的实现处，可以跳过接口</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + C</td>
-<td align="center">重构-快速提取常量</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + F</td>
-<td align="center">重构-快速提取成员变量</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + V</td>
-<td align="center">重构-快速提取变量</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + Y</td>
-<td align="center">同步、刷新</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + S</td>
-<td align="center">打开 IntelliJ IDEA 系统设置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + F7</td>
-<td align="center">显示使用的地方。寻找被该类或是变量被调用的地方，用弹出框的方式找出来</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + F11</td>
-<td align="center">切换全屏模式</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + Enter</td>
-<td align="center">光标所在行上空出一行，光标定位到新行 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + Home</td>
-<td align="center">弹出跟当前文件有关联的文件弹出层</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + Space</td>
-<td align="center">类名自动完成</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 左方向键</td>
-<td align="center">退回到上一个操作的地方 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 右方向键</td>
-<td align="center">前进到上一个操作的地方 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 前方向键</td>
-<td align="center">在查找模式下，跳到上个查找的文件</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 后方向键</td>
-<td align="center">在查找模式下，跳到下个查找的文件</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 右括号（]）</td>
-<td align="center">在打开多个项目的情况下，切换下一个项目窗口</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Alt + 左括号（[）</td>
-<td align="center">在打开多个项目的情况下，切换上一个项目窗口</td>
-</tr>
-</tbody></table>
-<h3 id="五、Ctrl-shift"><a href="#五、Ctrl-shift" class="headerlink" title="五、Ctrl + shift"></a>五、Ctrl + shift</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Ctrl + Shift + F</td>
-<td align="center">根据输入内容查找整个项目 或 指定目录内文件 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + R</td>
-<td align="center">根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + J</td>
-<td align="center">自动将下一行合并到当前行末尾 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Z</td>
-<td align="center">取消撤销 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + W</td>
-<td align="center">递进式取消选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展取消选中范围 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + N</td>
-<td align="center">通过文件名定位 &#x2F; 打开文件 &#x2F; 目录，打开目录需要在输入的内容后面多加一个正斜杠 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + U</td>
-<td align="center">对选中的代码进行大 &#x2F; 小写轮流转换 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + T</td>
-<td align="center">对当前类生成单元测试类，如果已经存在的单元测试类则可以进行选择 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + C</td>
-<td align="center">复制当前文件磁盘路径到剪贴板 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + V</td>
-<td align="center">弹出缓存的最近拷贝的内容管理器弹出层</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + E</td>
-<td align="center">显示最近修改的文件列表的弹出层</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + H</td>
-<td align="center">显示方法层次结构</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + B</td>
-<td align="center">跳转到类型声明处 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + I</td>
-<td align="center">快速查看光标所在的方法 或 类的定义</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + A</td>
-<td align="center">查找动作 &#x2F; 设置</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + &#x2F;</td>
-<td align="center">代码块注释 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + [</td>
-<td align="center">选中从光标所在位置到它的顶部中括号位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + ]</td>
-<td align="center">选中从光标所在位置到它的底部中括号位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + +</td>
-<td align="center">展开所有代码 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + -</td>
-<td align="center">折叠所有代码 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + F7</td>
-<td align="center">高亮显示所有该选中文本，按Esc高亮消失 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + F8</td>
-<td align="center">在 Debug 模式下，指定断点进入条件</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + F9</td>
-<td align="center">编译选中的文件 &#x2F; 包 &#x2F; Module</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + F12</td>
-<td align="center">编辑器最大化 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Space</td>
-<td align="center">智能代码提示</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Enter</td>
-<td align="center">自动结束代码，行末自动添加分号 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + Backspace</td>
-<td align="center">退回到上次修改的地方 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 1,2,3…9</td>
-<td align="center">快速添加指定数值的书签 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 左键单击</td>
-<td align="center">把光标放在某个类变量上，按此快捷键可以直接定位到该类中 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 左方向键</td>
-<td align="center">在代码文件上，光标跳转到当前单词 &#x2F; 中文句的左侧开头位置，同时选中该单词 &#x2F; 中文句 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 右方向键</td>
-<td align="center">在代码文件上，光标跳转到当前单词 &#x2F; 中文句的右侧开头位置，同时选中该单词 &#x2F; 中文句 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 前方向键</td>
-<td align="center">光标放在方法名上，将方法移动到上一个方法前面，调整方法排序 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Shift + 后方向键</td>
-<td align="center">光标放在方法名上，将方法移动到下一个方法前面，调整方法排序 （必备）</td>
-</tr>
-</tbody></table>
-<h3 id="六、Ctrl快捷键"><a href="#六、Ctrl快捷键" class="headerlink" title="六、Ctrl快捷键"></a>六、Ctrl快捷键</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Ctrl + F</td>
-<td align="center">在当前文件进行文本查找 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + R</td>
-<td align="center">在当前文件进行文本替换 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Z</td>
-<td align="center">撤销 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Y</td>
-<td align="center">删除光标所在行 或 删除选中的行 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + X</td>
-<td align="center">剪切光标所在行 或 剪切选择内容</td>
-</tr>
-<tr>
-<td align="center">Ctrl + C</td>
-<td align="center">复制光标所在行 或 复制选择内容</td>
-</tr>
-<tr>
-<td align="center">Ctrl + D</td>
-<td align="center">复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + W</td>
-<td align="center">递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + E</td>
-<td align="center">显示最近打开的文件记录列表 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + N</td>
-<td align="center">根据输入的 类名 查找类文件 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + G</td>
-<td align="center">在当前文件跳转到指定行处</td>
-</tr>
-<tr>
-<td align="center">Ctrl + J</td>
-<td align="center">插入自定义动态代码模板 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + P</td>
-<td align="center">方法参数提示显示 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Q</td>
-<td align="center">光标所在的变量 &#x2F; 类名 &#x2F; 方法名等上面（也可以在提示补充的时候按），显示文档内容</td>
-</tr>
-<tr>
-<td align="center">Ctrl + U</td>
-<td align="center">前往当前光标所在的方法的父类的方法 &#x2F; 接口定义 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + B</td>
-<td align="center">进入光标所在的方法&#x2F;变量的接口或是定义处，等效于 Ctrl + 左键单击 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + K</td>
-<td align="center">版本控制提交项目，需要此项目有加入到版本控制才可用</td>
-</tr>
-<tr>
-<td align="center">Ctrl + T</td>
-<td align="center">版本控制更新项目，需要此项目有加入到版本控制才可用</td>
-</tr>
-<tr>
-<td align="center">Ctrl + H</td>
-<td align="center">显示当前类的层次结构</td>
-</tr>
-<tr>
-<td align="center">Ctrl + O</td>
-<td align="center">选择可重写的方法</td>
-</tr>
-<tr>
-<td align="center">Ctrl + I</td>
-<td align="center">选择可继承的方法</td>
-</tr>
-<tr>
-<td align="center">Ctrl + +</td>
-<td align="center">展开代码</td>
-</tr>
-<tr>
-<td align="center">Ctrl + -</td>
-<td align="center">折叠代码</td>
-</tr>
-<tr>
-<td align="center">Ctrl + &#x2F;</td>
-<td align="center">注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + [</td>
-<td align="center">移动光标到当前所在代码的花括号开始位置</td>
-</tr>
-<tr>
-<td align="center">Ctrl + ]</td>
-<td align="center">移动光标到当前所在代码的花括号结束位置</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F1</td>
-<td align="center">在光标所在的错误代码处显示错误信息 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F3</td>
-<td align="center">调转到所选中的词的下一个引用位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F4</td>
-<td align="center">关闭当前编辑文件</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F8</td>
-<td align="center">在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F9</td>
-<td align="center">执行 Make Project 操作</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F11</td>
-<td align="center">选中文件 &#x2F; 文件夹，使用助记符设定 &#x2F; 取消书签 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + F12</td>
-<td align="center">弹出当前文件结构层，可以在弹出的层上直接输入，进行筛选</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Tab</td>
-<td align="center">编辑窗口切换，如果在切换的过程又加按上delete，则是关闭对应选中的窗口</td>
-</tr>
-<tr>
-<td align="center">Ctrl + End</td>
-<td align="center">跳到文件尾</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Home</td>
-<td align="center">跳到文件头</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Space</td>
-<td align="center">基础代码补全，默认在 Windows 系统上被输入法占用，需要进行修改，建议修改为 Ctrl + 逗号 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + Delete</td>
-<td align="center">删除光标后面的单词或是中文句 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + BackSpace</td>
-<td align="center">删除光标前面的单词或是中文句 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 1,2,3…9</td>
-<td align="center">定位到对应数值的书签位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 左键单击</td>
-<td align="center">在打开的文件标题上，弹出该文件路径 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 光标定位</td>
-<td align="center">按 Ctrl 不要松开，会显示光标所在的类信息摘要</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 左方向键</td>
-<td align="center">光标跳转到当前单词 &#x2F; 中文句的左侧开头位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 右方向键</td>
-<td align="center">光标跳转到当前单词 &#x2F; 中文句的右侧开头位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 前方向键</td>
-<td align="center">等效于鼠标滚轮向前效果 （必备）</td>
-</tr>
-<tr>
-<td align="center">Ctrl + 后方向键</td>
-<td align="center">等效于鼠标滚轮向后效果 （必备）</td>
-</tr>
-</tbody></table>
-<h3 id="七、shift快捷键"><a href="#七、shift快捷键" class="headerlink" title="七、shift快捷键"></a>七、shift快捷键</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Shift + F1</td>
-<td align="center">如果有外部文档可以连接外部文档</td>
-</tr>
-<tr>
-<td align="center">Shift + F2</td>
-<td align="center">跳转到上一个高亮错误 或 警告位置</td>
-</tr>
-<tr>
-<td align="center">Shift + F3</td>
-<td align="center">在查找模式下，查找匹配上一个</td>
-</tr>
-<tr>
-<td align="center">Shift + F4</td>
-<td align="center">对当前打开的文件，使用新Windows窗口打开，旧窗口保留</td>
-</tr>
-<tr>
-<td align="center">Shift + F6</td>
-<td align="center">对文件 &#x2F; 文件夹 重命名</td>
-</tr>
-<tr>
-<td align="center">Shift + F7</td>
-<td align="center">在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</td>
-</tr>
-<tr>
-<td align="center">Shift + F8</td>
-<td align="center">在 Debug 模式下，跳出，表现出来的效果跟 F9 一样</td>
-</tr>
-<tr>
-<td align="center">Shift + F9</td>
-<td align="center">等效于点击工具栏的 Debug 按钮</td>
-</tr>
-<tr>
-<td align="center">Shift + F10</td>
-<td align="center">等效于点击工具栏的 Run 按钮</td>
-</tr>
-<tr>
-<td align="center">Shift + F11</td>
-<td align="center">弹出书签显示层 （必备）</td>
-</tr>
-<tr>
-<td align="center">Shift + Tab</td>
-<td align="center">取消缩进 （必备）</td>
-</tr>
-<tr>
-<td align="center">Shift + ESC</td>
-<td align="center">隐藏当前 或 最后一个激活的工具窗口</td>
-</tr>
-<tr>
-<td align="center">Shift + End</td>
-<td align="center">选中光标到当前行尾位置</td>
-</tr>
-<tr>
-<td align="center">Shift + Home</td>
-<td align="center">选中光标到当前行头位置</td>
-</tr>
-<tr>
-<td align="center">Shift + Enter</td>
-<td align="center">开始新一行。光标所在行下空出一行，光标定位到新行位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">Shift + 左键单击</td>
-<td align="center">在打开的文件名上按此快捷键，可以关闭当前打开文件 （必备）</td>
-</tr>
-<tr>
-<td align="center">Shift + 滚轮前后滚动</td>
-<td align="center">当前文件的横向滚动轴滚动 （必备）</td>
-</tr>
-</tbody></table>
-<h3 id="八、其他快捷键"><a href="#八、其他快捷键" class="headerlink" title="八、其他快捷键"></a>八、其他快捷键</h3><table>
-<thead>
-<tr>
-<th align="center">快捷键</th>
-<th align="center">介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">F2</td>
-<td align="center">跳转到下一个高亮错误 或 警告位置 （必备）</td>
-</tr>
-<tr>
-<td align="center">F3</td>
-<td align="center">在查找模式下，定位到下一个匹配处</td>
-</tr>
-<tr>
-<td align="center">F4</td>
-<td align="center">编辑源 （必备）</td>
-</tr>
-<tr>
-<td align="center">F7</td>
-<td align="center">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中</td>
-</tr>
-<tr>
-<td align="center">F8</td>
-<td align="center">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内</td>
-</tr>
-<tr>
-<td align="center">F9</td>
-<td align="center">在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上</td>
-</tr>
-<tr>
-<td align="center">F11</td>
-<td align="center">添加书签 （必备）</td>
-</tr>
-<tr>
-<td align="center">F12</td>
-<td align="center">回到前一个工具窗口 （必备）</td>
-</tr>
-<tr>
-<td align="center">Tab</td>
-<td align="center">缩进 （必备）</td>
-</tr>
-<tr>
-<td align="center">ESC</td>
-<td align="center">从工具窗口进入代码文件窗口 （必备）</td>
-</tr>
-<tr>
-<td align="center">连按两次Shift</td>
-<td align="center">弹出 Search Everywhere 弹出层</td>
-</tr>
-</tbody></table>
-<h1 id="二、脱离鼠标"><a href="#二、脱离鼠标" class="headerlink" title="二、脱离鼠标"></a>二、脱离鼠标</h1><h2 id="快速打开面板"><a href="#快速打开面板" class="headerlink" title="快速打开面板"></a>快速打开面板</h2><p><code>ctrl + tab</code> 在打开的文件与功能面板之间切换 （非常强大，必考点）</p>
-<p>IDEA 内置了很多有用的工具和面板，比如 Console、Version Control 等，<br>如果用鼠标去找再去一个个点真的很费劲，可以通过 IDEA 的全局动作搜索功能进行查找，<br>快捷键是 <code>Ctrl + Shift + A</code>，在搜索框中输入工具或动作的关键字就能定位到，自己尝试下吧，非常强大！</p>
-<p>::: tip<br><code>Ctrl + Shift + A</code>非常强大，末尾会特别介绍几个与其相关的常用的功能。<br>:::</p>
-<h2 id="快速定位文件"><a href="#快速定位文件" class="headerlink" title="快速定位文件"></a>快速定位文件</h2><p>IDEA 通过连续点击<b>两次 Shift 键</b>可以打开全局文件名查找和最近访问文件查找；<br><code>Ctrl + E</code> 打开最近访问文件的查找框；<br><code>ctrl + shift + E</code>	打开最近编辑的文件</p>
-<h2 id="视野"><a href="#视野" class="headerlink" title="视野"></a>视野</h2><p><code>ctrl + up/down</code> 当前文件的视野转到上一行&#x2F;下一行，不加<code>ctrl</code>键的效果是不一样的，现在去尝试一下呗\</p>
-<h2 id="快速跳转行-x2F-列"><a href="#快速跳转行-x2F-列" class="headerlink" title="快速跳转行&#x2F;列"></a>快速跳转行&#x2F;列</h2><p>ctrl + G 打开跳转到行&#x2F;列功能<br>通常情况，你只需要输入数字即可跳转到相应的代码行，例如<code>144</code>，跳转到文件第144行<br>你也可以写 <code>10:12</code>， 它的意思是：跳转到文件中第10行第12列</p>
-<h2 id="跳转到定义"><a href="#跳转到定义" class="headerlink" title="跳转到定义"></a>跳转到定义</h2><p>有时候你想知道<code>customMethod</code>这个函数内部是如何实现的，尝试：<code>ctrl + b</code></p>
-<h2 id="行操作"><a href="#行操作" class="headerlink" title="行操作"></a>行操作</h2><p><code>ctrl + ←/→</code> 移动的一个词的开始或者结束<br><code>Ctrl + Home</code> 	第一行代码<br><code>Ctrl + End	</code> 最后一行代码 <br><code>Ctrl + Shift + L</code> 格式化&#x2F;美丽排版 <br><code>Alt + Enter</code> 超级牛批的智能提示 \</p>
-<h2 id="全局查找替换"><a href="#全局查找替换" class="headerlink" title="全局查找替换"></a>全局查找替换</h2><p>全局全文搜索 ： Ctrl + Shift + F <br>全局替换 ： Ctrl + Shift + R</p>
-<h2 id="修改并修改引用"><a href="#修改并修改引用" class="headerlink" title="修改并修改引用"></a>修改并修改引用</h2><p>IDEA 支持对文件名&#x2F;变量名重命名而不影响引用关系，快捷键： Shift + F6<br>::: tip<br>修改文件名可以同时修改代码中对于改文件名的引用，<br>修改变量名可以同时修改上下文中后续对于该变量名的引用。<br>:::<br>::: warning<br>对于Javascript开发，<code>Shift + F6</code>修改是一项比较危险的操作，因为Javascript的弱类型语言的关系，很多时候idea不知道俩个都叫做<code>customMethod</code>变量是否是同一个,<br>因此idea会提示你是否修改，然而这个提示面板是晦涩难懂的，如果你不熟悉它就盲目点了<code>Yes</code>，可能会意外修改了其它的代码。</p>
-<p>对于强类型语言，例如Java，这个操作通常是非常安全的。<br>:::</p>
-<h2 id="ctrl-shift-A中常用的功能-x2F-Actions"><a href="#ctrl-shift-A中常用的功能-x2F-Actions" class="headerlink" title="ctrl + shift + A中常用的功能 &#x2F; Actions"></a>ctrl + shift + A中常用的功能 &#x2F; Actions</h2><p><code>ctrl + shift + A</code>会打开一个输入框，你可以输入字符来搜索文件、符号以及动作。<br>一般情况下其最强大的功能就是搜索动作（在idea里英文叫做Action），并且它支持模糊搜索。<br>下面列举一些对摆脱鼠标编程非常有帮助的Action</p>
-<h3 id="版本管理"><a href="#版本管理" class="headerlink" title="版本管理"></a>版本管理</h3><ul>
-<li><code>ctrl + shift + A</code> &#x3D;&gt; 输入”version control” 进入版本管理面板，查看历史commit记录，本地修改等</li>
-</ul>
-<h3 id="命令行面板"><a href="#命令行面板" class="headerlink" title="命令行面板"></a>命令行面板</h3><ul>
-<li><code>ctrl + shift + A</code> &#x3D;&gt; 输入”terminal”</li>
-</ul>
-<h3 id="专注模式"><a href="#专注模式" class="headerlink" title="专注模式"></a>专注模式</h3><blockquote>
-<p>（也叫演出模式，表演模式）Enter&#x2F;QUIT Presentation mode 进入or退出专注模式，你自己试一下会发现，非常酷，非常专注！(一般简写prese即可搜索到)</p>
-</blockquote>
-<ul>
-<li><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “presentation”</li>
-</ul>
-<h3 id="更多Actions"><a href="#更多Actions" class="headerlink" title="更多Actions"></a>更多Actions</h3><table>
-<thead>
-<tr>
-<th align="center">Action</th>
-<th>打开方式</th>
-<th>用处</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">About</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “about”</td>
-<td>查看编辑器的大概信息 版本号等</td>
-</tr>
-<tr>
-<td align="center">branches</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “branches”</td>
-<td>如果你是使用git做版本管理，尝试这个Action 方便切换、修改、merge、push分支，是滴分支的管理这里全部完成</td>
-</tr>
-<tr>
-<td align="center">fetch</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “fetch”</td>
-<td>如果你是使用git做版本管理，立刻更新当前分支</td>
-</tr>
-<tr>
-<td align="center">Maven</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “maven”</td>
-<td>查看、导入、构建maven项目，maven管理都在这里</td>
-</tr>
-<tr>
-<td align="center">settings</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “setting”</td>
-<td>修改编辑器的全局设置</td>
-</tr>
-<tr>
-<td align="center">safe write</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “safe write”</td>
-<td>很多时候你需要关闭这个设置，而且它是默认打开的。因为当它处于打开状态时，一些构建工具无法检测到代码文件的变化</td>
-</tr>
-<tr>
-<td align="center">TODO</td>
-<td><code>ctrl + shift + A</code> &#x3D;&gt; 输入 “TODO”</td>
-<td>查看代码中TODO标签</td>
-</tr>
-</tbody></table>
-<p>:::tip<br>在打开的任何Action面板，如果有多个tab页，你都可以使用 <code>alt + ←/→</code> 来左右切换tab页。<br>:::</p>
+<h2 id="数字函数"><a href="#数字函数" class="headerlink" title="数字函数:"></a>数字函数:</h2><p>Round:四舍五入,round(45.926,2<img src="data:image/png;base64,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" alt="img"></p>
+<p>Trunc:截断，trunc(45.926,2) = 45.92</p>
+<p>Mod:求余，mod(1600,300)=100</p>
+<p>通用函数：</p>
+<p><strong>nvl(commission_pct,0),commission_pct<strong><strong>如果为空，就用</strong></strong>0****代替，否则用原来的值</strong></p>
+<p>问题：</p>
+<p>1、求公司员工的年薪（含commission_pct)</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> ename<span class="token punctuation">,</span><span class="token punctuation">(</span>sal<span class="token operator">+</span>nvl<span class="token punctuation">(</span>comm<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">12</span> <span class="token string">"年薪"</span> <span class="token keyword">from</span> emp<span class="token punctuation">;</span>
+</code></pre>
+<p>*<em>nvl2(ex1,ex2,ex3),<strong><strong>如果</strong></strong>ex1</em><em><strong>不为空，返回</strong></em><em>ex2</em><em><strong>，为空返回</strong></em><em>ex3</em>*</p>
+<p>eg: 查询员工的奖金率，若为空，返回0.01，若不为空，返回实际奖金率+0.015</p>
+<p>case ex1 when e1 then t1 when e2 then t2….. end “别名”</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> nvl2<span class="token punctuation">(</span>comm<span class="token punctuation">,</span><span class="token number">0.015</span><span class="token operator">+</span>comm<span class="token punctuation">,</span><span class="token number">0.01</span><span class="token punctuation">)</span> <span class="token keyword">from</span> emp<span class="token punctuation">;</span>
+</code></pre>
+<p>**–<strong><strong>若部门号为</strong></strong>10<strong><strong>，则打印其工资的</strong></strong>1.1<strong><strong>倍，</strong></strong>20<strong><strong>号部门，</strong></strong>1.2<strong><strong>倍，</strong></strong>30<strong><strong>号部门，</strong></strong>1.3**<strong>倍</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token operator">*</span><span class="token operator">*</span><span class="token keyword">select</span> ename<span class="token punctuation">,</span>deptno<span class="token punctuation">,</span><span class="token keyword">case</span> deptno <span class="token keyword">when</span> <span class="token number">10</span> <span class="token keyword">then</span> sal\<span class="token operator">*</span><span class="token number">1.1</span> <span class="token keyword">when</span> <span class="token number">20</span> <span class="token keyword">then</span> sal\<span class="token operator">*</span><span class="token number">1.2</span> <span class="token keyword">when</span> <span class="token number">30</span> <span class="token keyword">then</span> sal\<span class="token operator">*</span><span class="token number">1.3</span> <span class="token keyword">end</span> sal <span class="token keyword">from</span> emp<span class="token punctuation">;</span><span class="token operator">*</span><span class="token operator">*</span>    
+</code></pre>
+<p>打印出“2009年10月14日 9:25:40” 格式的当前系统的日期和时间</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> to_char<span class="token punctuation">(</span>sysdate<span class="token punctuation">,</span><span class="token string">'yyyy"年"mm"月"dd"日" hh:mi:ss'</span><span class="token punctuation">)</span> <span class="token keyword">from</span> dual<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="面试题："><a href="#面试题：" class="headerlink" title="面试题："></a>面试题：</h2><p>–显示系统时间（注：日期+时间)</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> sysdate <span class="token keyword">from</span> dual<span class="token punctuation">;</span>
+</code></pre>
+<p>练习题：</p>
+<p>–1、显示所有员工的姓名，部门号，和部门名称</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span><span class="token number">e</span><span class="token punctuation">.</span>department_id<span class="token punctuation">,</span><span class="token number">d</span><span class="token punctuation">.</span>department_name <span class="token keyword">from</span> employees <span class="token number">e</span> <span class="token keyword">join</span> departments <span class="token number">d</span> <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>department_id <span class="token operator">=</span> <span class="token number">d</span><span class="token punctuation">.</span>department_id<span class="token punctuation">;</span>
+</code></pre>
+<p>–查询90号部门员工的job_id和90号部门的location_id</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> job_id<span class="token punctuation">,</span>location_id <span class="token keyword">from</span> employees <span class="token number">e</span> <span class="token keyword">join</span> departments <span class="token number">d</span> <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>department_id<span class="token operator">=</span><span class="token number">d</span><span class="token punctuation">.</span>department_id <span class="token operator">and</span> <span class="token number">d</span><span class="token punctuation">.</span>department_id<span class="token operator">=</span><span class="token number">90</span><span class="token punctuation">;</span>
+</code></pre>
+<p>–选择所有有奖金的员工的last_name,department_name,location_id,city</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span><span class="token number">d</span><span class="token punctuation">.</span>department_name<span class="token punctuation">,</span>l<span class="token punctuation">.</span>location_id<span class="token punctuation">,</span>l<span class="token punctuation">.</span>city <span class="token keyword">from</span> employees <span class="token number">e</span> <span class="token keyword">join</span> departments <span class="token number">d</span> <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>department_id <span class="token operator">=</span> <span class="token number">d</span><span class="token punctuation">.</span>department_id <span class="token operator">and</span> <span class="token number">e</span><span class="token punctuation">.</span>commission_pct <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">join</span> locations l <span class="token keyword">on</span> <span class="token number">d</span><span class="token punctuation">.</span>location_id <span class="token operator">=</span> l<span class="token punctuation">.</span>location_id<span class="token punctuation">;</span>
+</code></pre>
+<p>–选择city再toronto工作的员工的last_name,job_id,department_id,dpartment_name</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token number">e</span><span class="token punctuation">.</span>last_name<span class="token punctuation">,</span><span class="token number">e</span><span class="token punctuation">.</span>job_id<span class="token punctuation">,</span><span class="token number">d</span><span class="token punctuation">.</span>department_id<span class="token punctuation">,</span><span class="token number">d</span><span class="token punctuation">.</span>department_name <span class="token keyword">from</span> departments <span class="token number">d</span> <span class="token keyword">join</span> locations l <span class="token keyword">on</span> l<span class="token punctuation">.</span>city<span class="token operator">=</span><span class="token string">'Toronto'</span> <span class="token operator">and</span> <span class="token number">d</span><span class="token punctuation">.</span>location_id<span class="token operator">=</span>l<span class="token punctuation">.</span>location_id <span class="token keyword">join</span> employees <span class="token number">e</span> <span class="token keyword">on</span> <span class="token number">d</span><span class="token punctuation">.</span>department_id <span class="token operator">=</span> <span class="token number">e</span><span class="token punctuation">.</span>department_id<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="2、多行函数：多条记录对应一条结果"><a href="#2、多行函数：多条记录对应一条结果" class="headerlink" title="2、多行函数：多条记录对应一条结果"></a>2、多行函数：多条记录对应一条结果</h2><h1 id="plsql语言："><a href="#plsql语言：" class="headerlink" title="plsql语言："></a>plsql语言：</h1><pre><code>存储过程：是提前经过编译的plsql语言
+</code></pre>
+<p>声明变量的方式：变量名 变量类型(变量长度) 例如：v_name varchar2(20);</p>
+<p>普通变量赋值的方式：1：直接赋值语句 :=</p>
+<pre><code>    2: 语句赋值，使用select...into...赋值：(语法 select 值 into 变量)
+</code></pre>
+<p><img src="/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20211210225725080.png" alt="image-20211210225725080"></p>
+<p>【示例】打印人员个人信息，包括：姓名、薪水、地址</p>
+<p>– 打印人员个人信息，包括姓名，薪水，地址</p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">declare</span>
+ <span class="token comment" spellcheck="true">--姓名</span>
+ v_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>:<span class="token operator">=</span><span class="token string">'哈哈'</span><span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">--薪水</span>
+ v_sal number<span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">--地址</span>
+ v_addr varchar2<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+ <span class="token comment" spellcheck="true">-- Test statements here</span>
+ <span class="token comment" spellcheck="true">--Dbms_Output.put('Hello world');</span>
+ <span class="token comment" spellcheck="true">--直接赋值</span>
+ v_sal :<span class="token operator">=</span> <span class="token number">1580</span><span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">--语句赋值</span>
+ <span class="token keyword">select</span> <span class="token string">'上海传智播客'</span> <span class="token keyword">into</span> v_addr <span class="token keyword">from</span> dual<span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">--打印输出</span>
+ Dbms_Output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span><span class="token string">'姓名:'</span><span class="token operator">||</span>v_name<span class="token operator">||</span><span class="token string">'薪水:'</span><span class="token operator">||</span>v_sal<span class="token operator">||</span><span class="token string">'地址:'</span><span class="token operator">||</span>v_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="条件判断语句"><a href="#条件判断语句" class="headerlink" title="条件判断语句"></a>条件判断语句</h2><p><img src="/Oracle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20211210225643956.png" alt="image-20211210225643956"></p>
+<pre class=" language-sql"><code class="language-sql">:<span class="token operator">=</span> 赋值语句
+<span class="token keyword">declare</span> 
+  <span class="token comment" spellcheck="true">-- Local variables here</span>
+  v_sal employees<span class="token punctuation">.</span>salary<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+  v_temp <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token comment" spellcheck="true">-- Test statements here</span>
+  <span class="token comment" spellcheck="true">--查询出150号员工的工资，若工资大于等于1w，则打印salary>=10000</span>
+ <span class="token comment" spellcheck="true">-- 若在5000到10000之间，则打印5000&lt;=salary&lt;=10000;否则打印salary&lt;5000</span>
+ <span class="token keyword">select</span> salary <span class="token keyword">into</span> v_sal <span class="token keyword">from</span> employees <span class="token keyword">where</span> employee_id <span class="token operator">=</span> <span class="token number">150</span><span class="token punctuation">;</span>
+ 
+ <span class="token keyword">if</span> v_sal <span class="token operator">></span> <span class="token number">10000</span> <span class="token keyword">then</span> v_temp :<span class="token operator">=</span> <span class="token string">'salary>10000'</span><span class="token punctuation">;</span>
+ elsif v_sal <span class="token operator">>=</span><span class="token number">5000</span> <span class="token keyword">then</span> v_temp :<span class="token operator">=</span> <span class="token string">'5000&lt;=salary&lt;=10000'</span><span class="token punctuation">;</span>
+ <span class="token keyword">else</span> v_temp :<span class="token operator">=</span> <span class="token string">'salary&lt;5000'</span><span class="token punctuation">;</span>
+ <span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+ dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>v_temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre>
+<h1 id="Oracle19c-重新设置密码："><a href="#Oracle19c-重新设置密码：" class="headerlink" title="Oracle19c****重新设置密码："></a><strong>Oracle19c****重新设置密码：</strong></h1><p>sqlplus /nolog(cmd输入）</p>
+<p>connect / as sysdba</p>
+<p>alter user sys identified by  密码;</p>
+<p>alter user system identified by 密码;</p>
+<p> alter user qyt identified by  qyt;</p>
+<p><strong>Oracle19c****创建用户：</strong></p>
+<p> 账号：sys / as sysdba</p>
+<p>密码：change_on_install</p>
+<p> create user c##scott IDENTIFIED BY a;</p>
+<p>–赋权 </p>
+<p> grant connect,resource,unlimited tablespace to c##scott container=all;</p>
+<p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203041425611.png" alt="image-20220304142503422"></p>
 
                 
             </div>
@@ -1265,7 +643,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zengdehai.github.io/2022/042357300.html">https://zengdehai.github.io/2022/042357300.html</a>
+                    <a href="https://zengdehai.github.io/2022/042360958.html">https://zengdehai.github.io/2022/042360958.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1303,8 +681,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-                                    <span class="chip bg-color">快捷键</span>
+                                <a href="/tags/oracle/">
+                                    <span class="chip bg-color">oracle</span>
                                 </a>
                             
                         </div>
@@ -1478,13 +856,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/042360747.html">
+                <a href="/2022/042377.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="docker容器">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="plsql学习笔记">
                         
-                        <span class="card-title">docker容器</span>
+                        <span class="card-title">plsql学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1499,8 +877,12 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            zengdehai
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    数据库连接工具
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1508,8 +890,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">环境配置</span>
+                    <a href="/tags/plsql/">
+                        <span class="chip bg-color">plsql</span>
                     </a>
                     
                 </div>
@@ -1520,16 +902,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/042357300.html">
+                <a href="/2022/042339805.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="idea快捷键">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="MySQL学习笔记">
                         
-                        <span class="card-title">idea快捷键</span>
+                        <span class="card-title">MySQL学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1544,18 +926,21 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            zengdehai
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mysql/" class="post-category">
+                                    mysql
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-                        <span class="chip bg-color">快捷键</span>
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>

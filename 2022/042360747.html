@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="cn">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="docker学习笔记, 大帅哥的博客">
+    <meta name="keywords" content="docker容器, 大帅哥的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,20 +16,22 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>docker学习笔记 | 大帅哥的博客</title>
-    <link rel="icon" type="image/png" href="/zengdehai.github.io/favicon.png">
+    <title>docker容器 | 大帅哥的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/zengdehai.github.io/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="stylesheet" href="/zengdehai.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.1.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -39,9 +41,9 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/zengdehai.github.io/" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/zengdehai.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">大帅哥的博客</span>
                 </a>
@@ -53,84 +55,84 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/" class="waves-effect waves-light">
+    <a href="/" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/tags" class="waves-effect waves-light">
+    <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/categories" class="waves-effect waves-light">
+    <a href="/categories" class="waves-effect waves-light">
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/archives" class="waves-effect waves-light">
+    <a href="/archives" class="waves-effect waves-light">
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/about" class="waves-effect waves-light">
+    <a href="/about" class="waves-effect waves-light">
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/contact" class="waves-effect waves-light">
+    <a href="/contact" class="waves-effect waves-light">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/zengdehai.github.io/friends" class="waves-effect waves-light">
+    <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -140,7 +142,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/zengdehai.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">大帅哥的博客</div>
         <div class="logo-desc">
@@ -156,77 +158,77 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/" class="waves-effect waves-light">
+		<a href="/" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/tags" class="waves-effect waves-light">
+		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/categories" class="waves-effect waves-light">
+		<a href="/categories" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/archives" class="waves-effect waves-light">
+		<a href="/archives" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/about" class="waves-effect waves-light">
+		<a href="/about" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/contact" class="waves-effect waves-light">
+		<a href="/contact" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/zengdehai.github.io/friends" class="waves-effect waves-light">
+		<a href="/friends" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -310,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/zengdehai.github.io/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">docker学习笔记</h1>
+                    <h1 class="description center-align post-title">docker容器</h1>
                 </div>
             </div>
         </div>
@@ -328,7 +330,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="/zengdehai.github.io/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -429,9 +431,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">环境配置</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -442,7 +448,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2022-04-23
                 </div>
                 
@@ -473,18 +479,18 @@
 <p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281854672.png" alt="image-20220228185411644"></p>
 <p>安装步骤根据图片顺序，图片中的命令按照顺序执行</p>
 <h2 id="4-2、更改仓库下载地址为阿里云镜像加速"><a href="#4-2、更改仓库下载地址为阿里云镜像加速" class="headerlink" title="4.2、更改仓库下载地址为阿里云镜像加速"></a>4.2、更改仓库下载地址为阿里云镜像加速</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281919290.png" alt="image-20220228191908232"></p>
-<h2 id="4-3、运行第一个命令"><a href="#4-3、运行第一个命令" class="headerlink" title="4.3、运行第一个命令"></a>4.3、运行第一个命令</h2><pre class=" language-shell"><code class="language-shell">docker  run  hello-world
-</code></pre>
+<h2 id="4-3、运行第一个命令"><a href="#4-3、运行第一个命令" class="headerlink" title="4.3、运行第一个命令"></a>4.3、运行第一个命令</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker  run  hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="4-4、run做了什么事"><a href="#4-4、run做了什么事" class="headerlink" title="4.4、run做了什么事"></a>4.4、run做了什么事</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281920634.png" alt="image-20220228192017529"></p>
-<h1 id="五、docker客户端命令"><a href="#五、docker客户端命令" class="headerlink" title="五、docker客户端命令"></a>五、docker客户端命令</h1><h2 id="5-1、帮助命令"><a href="#5-1、帮助命令" class="headerlink" title="5.1、帮助命令"></a>5.1、帮助命令</h2><pre class=" language-shell"><code class="language-shell">--查看docker版本
+<h1 id="五、docker客户端命令"><a href="#五、docker客户端命令" class="headerlink" title="五、docker客户端命令"></a>五、docker客户端命令</h1><h2 id="5-1、帮助命令"><a href="#5-1、帮助命令" class="headerlink" title="5.1、帮助命令"></a>5.1、帮助命令</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">--查看docker版本
 docker verion
 --docker的描述
 docker info
 --查看docker的命令有哪些
-docker --helpe
-</code></pre>
+docker --helpe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="5-2、镜像命令"><a href="#5-2、镜像命令" class="headerlink" title="5.2、镜像命令"></a>5.2、镜像命令</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202281941356.png" alt="image-20220228194100237"></p>
-<pre class=" language-shell"><code class="language-shell">--查看当前主机有哪些镜像实例
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">--查看当前主机有哪些镜像实例
 docker images
 参数说明：
 docker images -a 列出本地所有镜像层（包含中间层）
@@ -497,7 +503,8 @@ docker search 镜像的名字
 docker pull 镜像的名字 : 镜像的id（不带参数就是最新版）
 --删除某个镜像,加上-f就是强制删除
 docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202202282018265.png" alt="image-20220228201802205"></p>
 
                 
@@ -511,34 +518,34 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/zengdehai.github.io/about" rel="external nofollow noreferrer">zengdehai</a>
+                    <a href="/about" rel="external nofollow noreferrer">zengdehai</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zengdehai/zengdehai.github.io/zengdehai.github.io/2022/042360747.html">https://zengdehai/zengdehai.github.io/zengdehai.github.io/2022/042360747.html</a>
+                    <a href="https://zengdehai.github.io/2022/042360747.html">https://zengdehai.github.io/2022/042360747.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint polocy. If reproduced, please indicate source
-                    <a href="/zengdehai.github.io/about" target="_blank">zengdehai</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">zengdehai</a>
                     !
                 </span>
             </div>
@@ -547,7 +554,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -562,17 +569,21 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/zengdehai.github.io/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/zengdehai.github.io/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -690,10 +701,10 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/zengdehai.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/zengdehai.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -730,18 +741,17 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/zengdehai.github.io/2022/042360747.html">
+                <a href="/2022/042338464.html">
                     <div class="card-image">
                         
                         
-                        <img src="/zengdehai.github.io/medias/featureimages/10.jpg" class="responsive-img" alt="docker学习笔记">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="java8新特性学习笔记">
                         
-                        <span class="card-title">docker学习笔记</span>
+                        <span class="card-title">java8新特性学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -751,18 +761,29 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-23
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            zengdehai
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java8%E6%96%B0%E7%89%B9%E6%80%A7/">
+                        <span class="chip bg-color">java8新特性</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -770,14 +791,14 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/zengdehai.github.io/2022/042357300.html">
+                <a href="/2022/042357300.html">
                     <div class="card-image">
                         
                         
-                        <img src="/zengdehai.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="idea快捷键">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="idea快捷键">
                         
                         <span class="card-title">idea快捷键</span>
                     </div>
@@ -803,7 +824,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/zengdehai.github.io/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                    <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">
                         <span class="chip bg-color">快捷键</span>
                     </a>
                     
@@ -820,27 +841,27 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/zengdehai.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/zengdehai.github.io/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="/zengdehai.github.io/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/zengdehai.github.io/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -855,7 +876,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 </div>
 
 
-<script src="/zengdehai.github.io/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -940,7 +961,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/zengdehai.github.io/libs/aplayer/APlayer.min.css">
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         
@@ -990,7 +1011,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
     </div>
 </div>
 
-<script src="/zengdehai.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
@@ -1002,7 +1023,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
                 <span id="year">2019-2022</span>
             
             <span id="year">2019</span>
-            <a href="/zengdehai.github.io/about" target="_blank">zengdehai</a>
+            <a href="/about" target="_blank">zengdehai</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -1055,7 +1076,7 @@ docker rmi -f 镜像的名字 : 镜像的id（不带参数就是最新版）
 
 
 
-    <a href="/zengdehai.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
 
@@ -1107,8 +1128,8 @@ $(document).ready(function () { var int = setInterval(fixCount, 50); // 50ms周�
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1203,7 +1224,7 @@ $(function () {
         });
     };
 
-    searchFunc('/zengdehai.github.io/search.xml', 'searchInput', 'searchResult');
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1215,12 +1236,12 @@ $(function () {
 </div>
 
 
-    <script src="/zengdehai.github.io/libs/materialize/materialize.min.js"></script>
-    <script src="/zengdehai.github.io/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/zengdehai.github.io/libs/aos/aos.js"></script>
-    <script src="/zengdehai.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/zengdehai.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/zengdehai.github.io/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
         <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     </script>
 
@@ -1243,10 +1264,10 @@ $(function () {
 </script>
 
     
-    <script src="/zengdehai.github.io/libs/others/clicklove.js" async="async"></script>
+    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="/zengdehai.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1261,7 +1282,7 @@ $(function () {
     
 
     
-    <script src="/zengdehai.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 </body>
