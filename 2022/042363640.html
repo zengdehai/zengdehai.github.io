@@ -493,10 +493,65 @@
 <h2 id="3-3、Vue中常用的按键别名"><a href="#3-3、Vue中常用的按键别名" class="headerlink" title="3.3、Vue中常用的按键别名"></a>3.3、Vue中常用的按键别名</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203062052916.png" alt="image-20220306205255809"></p>
 <h2 id="3-4、key"><a href="#3-4、key" class="headerlink" title="3.4、key"></a>3.4、key</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203081553286.png" alt="image-20220308114916858"></p>
 <h2 id="3-5、收集表单数据"><a href="#3-5、收集表单数据" class="headerlink" title="3.5、收集表单数据"></a>3.5、收集表单数据</h2><p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203081559510.png" alt="image-20220308155911407"></p>
-<p>四、Vue脚手架</p>
-<p><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203091503751.png" alt="image-20220309150302573"></p>
-<h2 id="3-6-项目报错"><a href="#3-6-项目报错" class="headerlink" title="3.6 项目报错"></a>3.6 项目报错</h2><pre class=" language-java"><code class="language-java">下载指定版本的vue<span class="token operator">-</span>router
-cnpm install <span class="token operator">--</span>save vue<span class="token operator">-</span>router<span class="token annotation punctuation">@3</span><span class="token punctuation">.</span><span class="token number">0.7</span>
+<h2 id="3-6-项目报错"><a href="#3-6-项目报错" class="headerlink" title="3.6 项目报错"></a>3.6 项目报错</h2><blockquote>
+<p>下载指定版本的vue-router<br>cnpm install –save <a href="mailto:vue-router@3.0.7">vue-router@3.0.7</a></p>
+</blockquote>
+<h1 id="四、Vue脚手架"><a href="#四、Vue脚手架" class="headerlink" title="四、Vue脚手架"></a>四、Vue脚手架</h1><table>
+<thead>
+<tr>
+<th>Vue脚手架安装</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://gitee.com/zeng-dehai_admin/TyporaImg/raw/master/img/202203091503751.png" alt="image-20220309150302573"></td>
+</tr>
+</tbody></table>
+<h1 id="五、vuex的使用"><a href="#五、vuex的使用" class="headerlink" title="五、vuex的使用"></a>五、vuex的使用</h1><table>
+<thead>
+<tr>
+<th>store.js</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20220423224409533.png" alt="image-20220423224409533"></td>
+</tr>
+</tbody></table>
+<pre class=" language-vue"><code class="language-vue">import Vue from 'vue';
+import Vuex from 'vuex';
+Vue.use(Vuex);
+//全局state对象，用于保存所有组件的公共数据
+const state = {
+    user: {
+        userId: 0,
+        username: "",
+        userimg: "",
+    },
+}
+//监听state对象的值的最新状态，相当于计算属性
+const getters = {
+    getUser(state){
+        return state.user;
+    }
+}
+//唯一一个可以修改state数据(同步执行)
+const mutations = {
+    updateUser(state, user) {
+        state.user = user;
+    }
+}
+//用于响应组件中的动作(异步执行mutations)
+const actions = {
+    asynUpdateUser(context, data) {
+        context.commit('updateUser', data);
+    }
+}
+//创建并暴露store
+export default new Vuex.Store({
+    state,
+    getters,
+    actions,
+    mutations
+})
 </code></pre>
 
                 
