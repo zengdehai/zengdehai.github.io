@@ -875,7 +875,7 @@ Predict<span class="token operator">&lt;</span>T<span class="token operator">></
   </entry>
   <entry>
     <title></title>
-    <url>/2022/04230.html</url>
+    <url>/2022/04231.html</url>
     <content><![CDATA[<h1 id="1、蒙版："><a href="#1、蒙版：" class="headerlink" title="1、蒙版："></a>1、蒙版：</h1><pre class=" language-css"><code class="language-css"><span class="token comment" spellcheck="true">/*蒙版的z-index要处在中间层,.tts是弹出框的class*/</span>
  <span class="token selector"><span class="token class">.tts</span></span><span class="token punctuation">{</span>
         <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
@@ -1148,6 +1148,11 @@ methods: {
 <blockquote>
 <p>监听 beforeunload 这个方法，beforeunload 在页面刷新时触发，监听 beforeunload 让页面在刷新前将数据存到 sessionStorage 中。然后，在页面刷新时，读取 sessionStorage 中的数据到 store 中。</p>
 </blockquote>
+<h1 id="7、根据条件生效样式"><a href="#7、根据条件生效样式" class="headerlink" title="7、根据条件生效样式"></a>7、根据条件生效样式</h1><blockquote>
+<p>当index==addrIndex时，defaultAddr样式才生效</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html">&lt;li :class="{'user-addresslist':true, 'defaultAddr':index==addrIndex}"
+</code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -4368,6 +4373,13 @@ rabbitmqctl change_password <username> <newpassword> --rabbitmqctl change_passwo
     <content><![CDATA[<h2 id="Hexo-Matery主题美化"><a href="#Hexo-Matery主题美化" class="headerlink" title="Hexo-Matery主题美化"></a>Hexo-Matery主题美化</h2><p>在一番瞎改js代码后，终于无法忍受next主题，于是愤然投入Matery大家庭，结果证明，<strong>香！</strong><br>下面是我记录的配置Matery主题的流程，仅供后来的师傅们参考。</p>
 <blockquote>
 <p>大家可以来我Hexo博客主页看看具体效果 <a href="https://marmalade.vip/">我的小站</a></p>
+</blockquote>
+<blockquote>
+<p>hexo命令介绍：</p>
+<p>hexo new “文件名”  创建新的文档</p>
+<p>hexo c 清除缓存</p>
+<p>hexo s 启动服务</p>
+<p>hexo d 上传</p>
 </blockquote>
 <h3 id="下载安装Matery主题"><a href="#下载安装Matery主题" class="headerlink" title="下载安装Matery主题"></a>下载安装Matery主题</h3><p>首先在<a href="https://hexo.io/themes/">hexo官网主题</a>里面搜索<strong>Matery</strong>主题点击进入作者大大的<a href="https://github.com/blinkfox/hexo-theme-matery">github</a>，然后下载 master 分支的最新稳定版的代码，解压缩后将 hexo-theme-matery 的文件夹重命名为matery，复制到Hexo 的 themes 文件夹中</p>
 <p><img src="https://gitee.com/marmalade0/images/raw/master/img/20200819224655.png" alt="img"></p>
@@ -8103,6 +8115,338 @@ doSubmit<span class="token punctuation">:</span><span class="token keyword">func
       </categories>
       <tags>
         <tag>商城项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>centos7安装mysql5.7</title>
+    <url>/2022/04292831.html</url>
+    <content><![CDATA[<h1 id="CentOs7-安装-Mysql5-7"><a href="#CentOs7-安装-Mysql5-7" class="headerlink" title="CentOs7 安装 Mysql5.7"></a>CentOs7 安装 Mysql5.7</h1><p>2018-08-27 5351</p>
+<p><strong>简介：</strong> CentOs7 安装 Mysql5.7 1、下载mysql源安装包 wget <a href="http://dev.mysql.com/get/mysql57-community-release-el7-8">http://dev.mysql.com/get/mysql57-community-release-el7-8</a>.</p>
+<h4 id="CentOs7-安装-Mysql5-7-1"><a href="#CentOs7-安装-Mysql5-7-1" class="headerlink" title="CentOs7 安装 Mysql5.7"></a>CentOs7 安装 Mysql5.7</h4><h5 id="1、下载mysql源安装包"><a href="#1、下载mysql源安装包" class="headerlink" title="1、下载mysql源安装包"></a>1、下载mysql源安装包</h5><pre><code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+</code></pre>
+<h5 id="2、安装mysql源"><a href="#2、安装mysql源" class="headerlink" title="2、安装mysql源"></a>2、安装mysql源</h5><pre><code>yum localinstall mysql57-community-release-el7-8.noarch.rpm
+</code></pre>
+<h5 id="3、检查mysql源是否安装成功"><a href="#3、检查mysql源是否安装成功" class="headerlink" title="3、检查mysql源是否安装成功"></a>3、检查mysql源是否安装成功</h5><pre><code>yum repolist enabled | grep "mysql.*-community.*"
+</code></pre>
+<p><strong>返回</strong></p>
+<pre><code>[root@VM_18_105_centos ~]# yum repolist enabled | grep "mysql.*-community.*"
+mysql-connectors-community/x86_64    MySQL Connectors Community               63
+mysql-tools-community/x86_64         MySQL Tools Community                    69
+mysql57-community/x86_64             MySQL 5.7 Community Server              287
+</code></pre>
+<p><strong>看到上图所示表示安装成功。</strong></p>
+<p><strong>也可以修改 <code>vim /etc/yum.repos.d/mysql-community.repo</code>源，改变默认安装的mysql版本。比如要安装5.6版本，将5.7源的enabled=1改成enabled=0。然后再将5.6源的enabled=0改成enabled=1即可。改完之后的效果如下所示：</strong></p>
+<pre><code>..........
+# Enable to use MySQL 5.5
+[mysql55-community]
+name=MySQL 5.5 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.5-community/el/7/$basearch/
+enabled=0 # 这里 0表示不选
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+# Enable to use MySQL 5.6
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
+enabled=0 # 这里 0表示不选
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+[mysql57-community]
+name=MySQL 5.7 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
+enabled=1 # 这里 1 表示 选中
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+..........
+</code></pre>
+<hr>
+<h5 id="4、安装MySQL"><a href="#4、安装MySQL" class="headerlink" title="4、安装MySQL"></a>4、安装MySQL</h5><pre><code>yum install mysql-community-server
+</code></pre>
+<h5 id="5、启动MySQL服务"><a href="#5、启动MySQL服务" class="headerlink" title="5、启动MySQL服务"></a>5、启动MySQL服务</h5><pre><code>systemctl start mysqld
+</code></pre>
+<p>查看MySQL的启动状态</p>
+<pre><code>[root@VM_18_105_centos ~]# systemctl status mysqld
+● mysqld.service - MySQL Server
+   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
+   Active: active (running) since 四 2018-08-23 15:27:28 CST; 1h 26min ago
+     Docs: man:mysqld(8)
+           http://dev.mysql.com/doc/refman/en/using-systemd.html
+  Process: 21453 ExecStart=/usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid $MYSQLD_OPTS (code=exited, status=0/SUCCESS)
+  Process: 21432 ExecStartPre=/usr/bin/mysqld_pre_systemd (code=exited, status=0/SUCCESS)
+ Main PID: 21457 (mysqld)
+   Memory: 202.1M
+   CGroup: /system.slice/mysqld.service
+           └─21457 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid
+</code></pre>
+<h5 id="6、设置开机启动"><a href="#6、设置开机启动" class="headerlink" title="6、设置开机启动"></a>6、设置开机启动</h5><pre><code> systemctl enable mysqld
+ systemctl daemon-reload
+</code></pre>
+<h5 id="7、获取root登陆密码"><a href="#7、获取root登陆密码" class="headerlink" title="7、获取root登陆密码"></a>7、获取root登陆密码</h5><p>mysql安装完成之后，在/var/log/mysqld.log文件中给root生成了一个默认密码。通过下面的方式找到root默认密码，然后登录mysql进行修改：</p>
+<pre><code>[root@VM_18_105_centos ~]#  grep 'temporary password' /var/log/mysqld.log
+2018-08-23T06:10:44.014590Z 1 [Note] A temporary password is generated for root@localhost: thI/5wEl_chk
+</code></pre>
+<p>ps:如果没有返回，找不到root密码，解决方案：</p>
+<pre><code># 1删除原来安装过的mysql残留的数据（这一步非常重要，问题就出在这）
+rm -rf /var/lib/mysql
+# 2重启mysqld服务
+systemctl restart mysqld
+# 3再去找临时密码
+grep 'temporary password' /var/log/mysqld.log
+</code></pre>
+<p>原因有可能是之前安装过一次，没有安装好。</p>
+<h5 id="8、登陆"><a href="#8、登陆" class="headerlink" title="8、登陆"></a>8、登陆</h5><pre><code>[root@VM_18_105_centos ~]# mysql -uroot -p
+---- 输入密码：thI/5wEl_chk
+# 修改密码
+mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY '123456Aa!'; 
+</code></pre>
+<p>MySql 默认密码级别一定要有大小写字母和特殊符号，所以比较麻烦。</p>
+<h5 id="9、修改密码策略"><a href="#9、修改密码策略" class="headerlink" title="9、修改密码策略"></a>9、修改密码策略</h5><p>在/etc/my.cnf文件添加validate_password_policy配置，指定密码策略</p>
+<pre><code># 0（LOW）：验证 Length
+# 1（MEDIUM）：验证 Length; numeric, lowercase/uppercase, and special characters
+# 2（STRONG）：验证 Length; numeric, lowercase/uppercase, and special characters; dictionary file
+validate_password_policy=0
+</code></pre>
+<p>当然如果不需要密码策略，可以禁用：<br>在/etc/my.cnf文件添加</p>
+<pre><code>validate_password = off
+</code></pre>
+<p>重启生效：</p>
+<pre><code>systemctl restart mysqld
+</code></pre>
+<p>Mysql的root用户，只能本地访问，这里在创建一个远程可以访问的 用户。</p>
+<pre><code> GRANT ALL PRIVILEGES ON *.* TO 'its'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+</code></pre>
+<h5 id="10、忽略大小写"><a href="#10、忽略大小写" class="headerlink" title="10、忽略大小写"></a>10、忽略大小写</h5><p>登陆mysql查看</p>
+<pre><code>mysql&gt; show variables like "%case%";
++------------------------+-------+
+| Variable_name          | Value |
++------------------------+-------+
+| lower_case_file_system | OFF   |
+| lower_case_table_names | 0     |  ##0区分 1 不区分
++------------------------+-------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>修改配置文件 /etc/my.cnf 添加：</p>
+<pre><code># 0：区分大小写，1：不区分大小写
+lower_case_table_names =1
+</code></pre>
+<p>重启后生效：</p>
+<pre><code>systemctl restart mysqld
+</code></pre>
+<h5 id="11、用户权限"><a href="#11、用户权限" class="headerlink" title="11、用户权限"></a>11、用户权限</h5><p>把数据库迁移到新的服务器上,执行存储过程时出现了如下问题:</p>
+<pre><code>execute command denied to user ‘用户名’@’%’ for routine ‘函数名称’
+</code></pre>
+<p>后来一查原来是权限问题,只要用下面的语句改一下相应用户的权限就可以了:</p>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO ‘用户名’@’%’ ;
+FLUSH PRIVILEGES;
+</code></pre>
+<p>相应的撤消权限命令:</p>
+<pre><code>REVOKE ALL PRIVILEGES ON *.* FROM  ‘用户名’@’%’ ;
+FLUSH PRIVILEGES;
+</code></pre>
+<h5 id="12、跑脚本的时候："><a href="#12、跑脚本的时候：" class="headerlink" title="12、跑脚本的时候："></a>12、跑脚本的时候：</h5><ol>
+<li><code>ERROR 1067 (42000): Invalid default value for 'FAILD_TIME'</code> （对TIMESTAMP 类型的子段如果不设置缺省值或没有标志not null时候在创建表时会报这个错误）<br>这是因为<code>sql_mode</code>中的<code>NO_ZEROR_DATE</code>导制的，在<code>strict mode</code>中不允许’0000-00-00’作为合法日期</li>
+</ol>
+<p>使用下面的命令查看sql_mode</p>
+<pre><code>mysql&gt;show variables like 'sql_mode';
+
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+| Variable_name | Value                                                                                                                                     |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+| sql_mode      | ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+</code></pre>
+<p>将上面的<code>NO_ZERO_DATE</code>改为下面的<code>ALLOW_INVALID_DATES</code></p>
+<pre><code>mysql&gt; set sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,ALLOW_INVALID_DATES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+</code></pre>
+<p>上面的设置是临时设置，在重新登陆后，该设置又恢复为NO_ZERO_DATE</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>CentOs7 安装 Mysql5.7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux学习笔记</title>
+    <url>/2022/042819630.html</url>
+    <content><![CDATA[<h1 id="一、学习阶段"><a href="#一、学习阶段" class="headerlink" title="一、学习阶段"></a>一、学习阶段</h1><h1 id=""><a href="#" class="headerlink" title=""></a><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281754892.jpg" alt="img"></h1><h1 id="二、Linux常见命令"><a href="#二、Linux常见命令" class="headerlink" title="二、Linux常见命令"></a>二、Linux常见命令</h1><h2 id="2-1-常见命令"><a href="#2-1-常见命令" class="headerlink" title="2.1 常见命令"></a>2.1 常见命令</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281754914.jpg" alt="img"></p>
+<p>cd . 当前目录</p>
+<p>ls 列出当前目录下的所有文件</p>
+<p>touch 新文件名 可以新建文件</p>
+<p>/ 是Linux根目录</p>
+<p>clear 清屏</p>
+<p>tar -zvxf xx.tar.xx 解压</p>
+<p>./文件名称 安装</p>
+<h2 id="2-2、关机、重启命令"><a href="#2-2、关机、重启命令" class="headerlink" title="2.2、关机、重启命令"></a>2.2、关机、重启命令</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281754798.jpg" alt="img"></p>
+<h2 id="2-3、登录、注销命令"><a href="#2-3、登录、注销命令" class="headerlink" title="2.3、登录、注销命令"></a>2.3、登录、注销命令</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281754737.jpg" alt="img"></p>
+<p>注意：这里图形界面指打开的终端，而logout要在远程登陆的窗口才有效</p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281755972.jpg" alt="img"></p>
+<h2 id="3、虚拟机三种网络连接方式"><a href="#3、虚拟机三种网络连接方式" class="headerlink" title="3、虚拟机三种网络连接方式"></a>3、虚拟机三种网络连接方式</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281755970.jpg" alt="img"></p>
+<h1 id="三、安装vmtools"><a href="#三、安装vmtools" class="headerlink" title="三、安装vmtools"></a>三、安装vmtools</h1><h2 id="1、为什么要安装vmtools"><a href="#1、为什么要安装vmtools" class="headerlink" title="1、为什么要安装vmtools"></a>1、为什么要安装vmtools</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281755296.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281755294.jpg" alt="img"></p>
+<h2 id="2、安装步骤"><a href="#2、安装步骤" class="headerlink" title="2、安装步骤"></a>2、安装步骤</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281755295.jpg" alt="img"></p>
+<h2 id="3、练习"><a href="#3、练习" class="headerlink" title="3、练习"></a>3、练习</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756387.jpg" alt="img"></p>
+<h1 id="四、Vi和vim操作"><a href="#四、Vi和vim操作" class="headerlink" title="四、Vi和vim操作"></a>四、Vi和vim操作</h1><p>vi直接跟文件名，没有这个文件会创建这个文件，有这个文件就会覆盖原有的文件。</p>
+<p>按i进入编辑模式，先按esc，并输入:英文冒号退出，wq! 表示强制写入并退出</p>
+<p>:wq!</p>
+<h2 id="4-2、各种模式之间的相互切换"><a href="#4-2、各种模式之间的相互切换" class="headerlink" title="4.2、各种模式之间的相互切换"></a>4.2、各种模式之间的相互切换</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756545.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756869.jpg" alt="img"></p>
+<h1 id="五、目录结构"><a href="#五、目录结构" class="headerlink" title="五、目录结构"></a>五、目录结构</h1><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756283.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756303.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756404.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756902.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756709.jpg" alt="img"></p>
+<h1 id="六、用户管理"><a href="#六、用户管理" class="headerlink" title="六、用户管理"></a>六、用户管理</h1><h2 id="6-1、命令"><a href="#6-1、命令" class="headerlink" title="6.1、命令"></a>6.1、命令</h2><table>
+<thead>
+<tr>
+<th>useradd 用户名</th>
+<th>创建用户</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>useradd   d /home/tiger 用户名</td>
+<td>创建用户并指定家目录</td>
+</tr>
+<tr>
+<td>password   用户名</td>
+<td>为指定用户指定密码</td>
+</tr>
+<tr>
+<td>userdel 用户名</td>
+<td>删除用户，不会删除家目录</td>
+</tr>
+<tr>
+<td>userdel -r 用户名</td>
+<td>删除用户及家目录</td>
+</tr>
+</tbody></table>
+<h2 id="6-2、切换用户"><a href="#6-2、切换用户" class="headerlink" title="6.2、切换用户"></a>6.2、切换用户</h2><p>su - 用户名 切换用户</p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756070.jpg" alt="img"></p>
+<h2 id="6-3、用户组"><a href="#6-3、用户组" class="headerlink" title="6.3、用户组"></a>6.3、用户组</h2><table>
+<thead>
+<tr>
+<th>groupadd   组名</th>
+<th>创建组</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>groupdel   组名</td>
+<td>删除组</td>
+</tr>
+<tr>
+<td>useradd -g 用户组 用户名</td>
+<td>创建用户并指定用户组</td>
+</tr>
+<tr>
+<td>usermod -g 用户组 用户名</td>
+<td>将用户修改到指定的用户组</td>
+</tr>
+</tbody></table>
+<h2 id="6-4、用户和组的相关文件"><a href="#6-4、用户和组的相关文件" class="headerlink" title="6.4、用户和组的相关文件"></a>6.4、用户和组的相关文件</h2><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281756896.jpg" alt="img"></p>
+<h1 id="七、实用指令"><a href="#七、实用指令" class="headerlink" title="七、实用指令"></a>七、实用指令</h1><p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281757650.jpg" alt="img"></p>
+<p><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204281758632.jpg" alt="img"></p>
+<blockquote>
+<p>lsof -i:80   可以查看80端口的运行情况，</p>
+<p>ps -ef | grep nginx</p>
+<p>kill -9 pid号  杀死进程</p>
+</blockquote>
+<h1 id="八、Linux下安装软件"><a href="#八、Linux下安装软件" class="headerlink" title="八、Linux下安装软件"></a>八、Linux下安装软件</h1><h2 id="8-1、安装jdk"><a href="#8-1、安装jdk" class="headerlink" title="8.1、安装jdk"></a>8.1、安装jdk</h2><blockquote>
+<p>把 <a href="............%5C%E8%B5%84%E6%96%99%5CTOOLS%5C%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8B%E9%9D%A2%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8%5Cjdk-8u301-linux-x64.tar.gz">jdk-8u301-linux-x64.tar.gz</a> 放到/usr/local下面，使用tar -zxvf jdk-8u301-linux-x64.tar.gz解压缩，进入/etc中查看profile,使用vim profile命令,在最后面加入以下配置，之后在/etc目录下使用source profile让profile配置文件生效。然后使用java -version检测jdk是否安装成功。</p>
+</blockquote>
+<pre class=" language-java"><code class="language-java">export JAVA_HOME<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span> jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_301 
+export 	JRE_HOME<span class="token operator">=</span>$JAVA_HOME<span class="token operator">/</span>jre
+export CLASSPATH<span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">:</span>$JAVA_HOME<span class="token operator">/</span>lib<span class="token operator">:</span>$JRE_HOME<span class="token operator">/</span>lib
+export PATH<span class="token operator">=</span>$JAVA_HOME<span class="token operator">/</span>bin<span class="token operator">:</span>$PATH    
+</code></pre>
+<h2 id="8-2、安装Tomcat"><a href="#8-2、安装Tomcat" class="headerlink" title="8.2、安装Tomcat"></a>8.2、安装Tomcat</h2><blockquote>
+<p>把 放到/usr/local下面，使用tar -zxvf apache-tomcat-9.0.52.tar.gz命令解压缩，然后直接进入Tomcat的bin目录下使用./startup.sh命令开启Tomcat服务</p>
+</blockquote>
+<h2 id="8-3、安装mysql-以下命令请按顺序执行"><a href="#8-3、安装mysql-以下命令请按顺序执行" class="headerlink" title="8.3、安装mysql(以下命令请按顺序执行)"></a>8.3、安装mysql(以下命令请按顺序执行)</h2><p>8.3.1、使用wget指令下载mysql的rpm文件</p>
+<pre class=" language-shell"><code class="language-shell">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+</code></pre>
+<p>8.3.2、使用rpm指令安装mysql</p>
+<pre class=" language-shell"><code class="language-shell">rpm -ivh mysql57-community-release-el7-10.noarch.rpm
+</code></pre>
+<p>8.3.3、通过yum安装mysql服务</p>
+<pre class=" language-shell"><code class="language-shell">yum -y install mysql-community-server
+</code></pre>
+<p>注意，这个地方可能报错公钥未安装，使用以下命令rpm –import <a href="https://repo.mysql.com/RPM-GPG-KEY-mysql-2022%EF%BC%8C%E7%84%B6%E5%90%8E%E5%9C%A8%E6%89%A7%E8%A1%8Cyum">https://repo.mysql.com/RPM-GPG-KEY-mysql-2022，然后在执行yum</a> -y install mysql-community-server，</p>
+<p>如果以上没有安装成功，建议看阿里云上面的文章</p>
+<p>8.3.4、加入开机启动</p>
+<pre class=" language-shell"><code class="language-shell">systemctl enable mysqld
+</code></pre>
+<p>8.3.5、启动mysql服务</p>
+<pre class=" language-shell"><code class="language-shell">systemctl start mysqld
+</code></pre>
+<p>8.3.6、查看3306被谁占用</p>
+<pre class=" language-shll"><code class="language-shll">lsof -i:3306
+</code></pre>
+<h1 id="九、项目部署-前后端分离项目（以锋迷商城为例）"><a href="#九、项目部署-前后端分离项目（以锋迷商城为例）" class="headerlink" title="九、项目部署-前后端分离项目（以锋迷商城为例）"></a>九、项目部署-前后端分离项目（以锋迷商城为例）</h1><h2 id="9-1、后台项目部署"><a href="#9-1、后台项目部署" class="headerlink" title="9.1、后台项目部署"></a>9.1、后台项目部署</h2><p><strong>对于maven聚合项目，需要在父工程添加如下插件</strong></p>
+<pre class=" language-xml"><code class="language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>maven-compiler-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span><span class="token punctuation">></span></span>${java.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>source</span><span class="token punctuation">></span></span>
+                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>target</span><span class="token punctuation">></span></span>${java.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>target</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.maven.plugins<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>maven-surefire-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.19.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>skipTests</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>skipTests</span><span class="token punctuation">></span></span>    <span class="token comment" spellcheck="true">&lt;!--默认关掉单元测试 --></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
+</code></pre>
+<p><strong>在有启动类的子模块的pom.xml里面添加如下代码：</strong></p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!-- 指定该Main Class为全局的唯一入口 --></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mainClass</span><span class="token punctuation">></span></span>com.zdh.fmmall.ApiApplication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mainClass</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>layout</span><span class="token punctuation">></span></span>ZIP<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>layout</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goal</span><span class="token punctuation">></span></span>repackage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goal</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--可以把依赖的包都打包到生成的Jar包中--></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goals</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="9-2、前台项目部署"><a href="#9-2、前台项目部署" class="headerlink" title="9.2、前台项目部署"></a>9.2、前台项目部署</h2><p>先将Tomcat压缩包放入/usr/local/下解压，然后进入到conf目录下执行cat -n server.xml | grep 8080命令，然后执行vim +69 server.xml</p>
+<table>
+<thead>
+<tr>
+<th>69是找到的行号，vim之后修改端口号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://mytypora-image.oss-cn-chengdu.aliyuncs.com/img/202204291312976.png" alt="image-20220429131221167"></td>
+</tr>
+</tbody></table>
+<p>9.3、安装Nginx，是一个高并发，可以作为反向代理的web服务器。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>

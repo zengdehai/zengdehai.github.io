@@ -738,6 +738,11 @@ methods: {
 <blockquote>
 <p>监听 beforeunload 这个方法，beforeunload 在页面刷新时触发，监听 beforeunload 让页面在刷新前将数据存到 sessionStorage 中。然后，在页面刷新时，读取 sessionStorage 中的数据到 store 中。</p>
 </blockquote>
+<h1 id="7、根据条件生效样式"><a href="#7、根据条件生效样式" class="headerlink" title="7、根据条件生效样式"></a>7、根据条件生效样式</h1><blockquote>
+<p>当index==addrIndex时，defaultAddr样式才生效</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html">&lt;li :class="{'user-addresslist':true, 'defaultAddr':index==addrIndex}"
+</code></pre>
 
                 
             </div>
@@ -764,7 +769,7 @@ methods: {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zengdehai.github.io/2022/04230.html">https://zengdehai.github.io/2022/04230.html</a>
+                    <a href="https://zengdehai.github.io/2022/04231.html">https://zengdehai.github.io/2022/04231.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
